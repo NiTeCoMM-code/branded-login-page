@@ -23,7 +23,9 @@ function clb_block_author_enumeration() {
 		return;
 	}
 
-	if ( isset( $_GET['author'] ) ) {
+	// Block ?author=N enumeration. get_query_var() returns 0 when absent,
+	// avoiding direct access to $_GET and the need for a nonce.
+	if ( (int) get_query_var( 'author' ) > 0 ) {
 		wp_safe_redirect( home_url( '/' ), 301 );
 		exit;
 	}

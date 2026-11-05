@@ -18,15 +18,15 @@ function clb_login_page_styles() {
 
 	$logo_url              = ! empty( $options['logo_url'] ) ? esc_url( $options['logo_url'] ) : '';
 	$background_url        = ! empty( $options['background_url'] ) ? esc_url( $options['background_url'] ) : '';
-	$background_overlay    = esc_attr( $options['background_overlay'] );
+	$background_overlay    = $options['background_overlay'];
 	$form_width            = absint( $options['form_width'] );
 	$logo_width            = absint( $options['logo_width'] );
 	$logo_height           = absint( $options['logo_height'] );
-	$primary_color         = esc_attr( $options['primary_color'] );
-	$button_color          = esc_attr( $options['button_color'] );
-	$button_hover_color    = esc_attr( $options['button_hover_color'] );
-	$link_color            = esc_attr( $options['link_color'] );
-	$form_background_color = esc_attr( $options['form_background_color'] );
+	$primary_color         = $options['primary_color'];
+	$button_color          = $options['button_color'];
+	$button_hover_color    = $options['button_hover_color'];
+	$link_color            = $options['link_color'];
+	$form_background_color = $options['form_background_color'];
 	$hide_back_to_blog     = ! empty( $options['hide_back_to_blog'] );
 	$hide_lang_switcher    = ! empty( $options['hide_language_switcher'] );
 	?>
@@ -35,8 +35,8 @@ function clb_login_page_styles() {
 			min-height: 100vh;
 			<?php if ( ! empty( $background_url ) ) : ?>
 				background:
-					linear-gradient(rgba(0,0,0,<?php echo $background_overlay; ?>), rgba(0,0,0,<?php echo $background_overlay; ?>)),
-					url('<?php echo $background_url; ?>') no-repeat center center fixed;
+					linear-gradient(rgba(0,0,0,<?php echo esc_attr( $background_overlay ); ?>), rgba(0,0,0,<?php echo esc_attr( $background_overlay ); ?>)),
+					url('<?php echo esc_url( $background_url ); ?>') no-repeat center center fixed;
 				background-size: cover;
 			<?php else : ?>
 				background: #f3f4f6;
@@ -45,7 +45,7 @@ function clb_login_page_styles() {
 
 		body.login div#login {
 			width: 100%;
-			max-width: <?php echo $form_width; ?>px;
+			max-width: <?php echo esc_attr( $form_width ); ?>px;
 			padding: 4% 20px 20px;
 		}
 
@@ -56,8 +56,8 @@ function clb_login_page_styles() {
 		.login h1 a {
 			display: block;
 			width: 100%;
-			max-width: <?php echo $logo_width; ?>px;
-			height: <?php echo $logo_height; ?>px;
+			max-width: <?php echo esc_attr( $logo_width ); ?>px;
+			height: <?php echo esc_attr( $logo_height ); ?>px;
 			margin: 0 auto 10px;
 			background-position: center center !important;
 			background-repeat: no-repeat !important;
@@ -67,14 +67,14 @@ function clb_login_page_styles() {
 			outline: none;
 			box-shadow: none;
 			<?php if ( ! empty( $logo_url ) ) : ?>
-				background-image: url('<?php echo $logo_url; ?>') !important;
+				background-image: url('<?php echo esc_url( $logo_url ); ?>') !important;
 			<?php else : ?>
 				background-image: none !important;
 			<?php endif; ?>
 		}
 
 		.login form {
-			background: <?php echo $form_background_color; ?>;
+			background: <?php echo esc_attr( $form_background_color ); ?>;
 			border: 0;
 			border-radius: 14px;
 			box-shadow: 0 18px 45px rgba(0,0,0,0.18);
@@ -100,13 +100,13 @@ function clb_login_page_styles() {
 		.login input[type="text"]:focus,
 		.login input[type="password"]:focus,
 		.login input[type="email"]:focus {
-			border-color: <?php echo $primary_color; ?>;
+			border-color: <?php echo esc_attr( $primary_color ); ?>;
 			box-shadow: 0 0 0 3px rgba(0,0,0,0.08);
 		}
 
 		.wp-core-ui .button-primary {
-			background: <?php echo $button_color; ?>;
-			border-color: <?php echo $button_color; ?>;
+			background: <?php echo esc_attr( $button_color ); ?>;
+			border-color: <?php echo esc_attr( $button_color ); ?>;
 			border-radius: 8px;
 			min-height: 42px;
 			padding: 0 18px;
@@ -117,12 +117,12 @@ function clb_login_page_styles() {
 
 		.wp-core-ui .button-primary:hover,
 		.wp-core-ui .button-primary:focus {
-			background: <?php echo $button_hover_color; ?>;
-			border-color: <?php echo $button_hover_color; ?>;
+			background: <?php echo esc_attr( $button_hover_color ); ?>;
+			border-color: <?php echo esc_attr( $button_hover_color ); ?>;
 		}
 
 		.login .button.wp-hide-pw {
-			color: <?php echo $primary_color; ?>;
+			color: <?php echo esc_attr( $primary_color ); ?>;
 		}
 
 		.login #nav,
@@ -133,7 +133,7 @@ function clb_login_page_styles() {
 
 		.login #nav a,
 		.login #backtoblog a {
-			color: <?php echo $link_color; ?>;
+			color: <?php echo esc_attr( $link_color ); ?>;
 			text-decoration: none;
 			font-weight: 600;
 		}
@@ -146,7 +146,7 @@ function clb_login_page_styles() {
 		.login .message,
 		.login .notice,
 		.login .success {
-			border-left: 4px solid <?php echo $primary_color; ?>;
+			border-left: 4px solid <?php echo esc_attr( $primary_color ); ?>;
 			border-radius: 8px;
 		}
 

@@ -1,6 +1,6 @@
 === Custom Login Branding ===
-Contributors:      braxtonmoody, techtankholdings
-Donate link:       https://braxtonmoody.com/
+Contributors:      techtankholdings
+Donate link:       https://techtankholdings.com/
 Tags:              login, branding, customize, admin, security, login page
 Requires at least: 5.0
 Requires PHP:      7.4

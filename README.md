@@ -1,6 +1,6 @@
 # Custom Login Branding
 
-**Contributors:** braxtonmoody, techtankholdings  
+**Contributors:** techtankholdings
 **Plugin Name:** Custom Login Branding  
 **Requires at least:** 5.0  
 **Tested up to:** 7.1  

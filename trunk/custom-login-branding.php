@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Custom Login Branding
- * Plugin URI: https://braxtonmoody.com
+ * Plugin URI: https://techtankholdings.com/
  * Description: Adds a configurable branded WordPress login page with logo, background image, color controls, and basic security options.
  * Version: 1.0.1
- * Author: Braxton Moody
- * Author URI: https://braxtonmoody.com
+ * Author: techtankholdings
+ * Author URI: https://techtankholdings.com/
  * License: GPLv2 or later
  * Text Domain: custom-login-branding
  */
