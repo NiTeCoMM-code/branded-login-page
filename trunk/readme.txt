@@ -1,4 +1,4 @@
-=== Custom Login Branding ===
+=== Branded Login Page ===
 Contributors:      techtankholdings
 Donate link:       https://techtankholdings.com/
 Tags:              login, branding, customize, admin, security, login page
@@ -13,7 +13,7 @@ Branded, configurable WordPress login page with logo, background image, colors, 
 
 == Description ==
 
-Custom Login Branding gives store and site owners an easy way to make the WordPress login screen match their brand. Instead of the default WordPress logo and plain background, you can set your own logo, a background image, and a color scheme from a single settings screen.
+Branded Login Page gives store and site owners an easy way to make the WordPress login screen match their brand. Instead of the default WordPress logo and plain background, you can set your own logo, a background image, and a color scheme from a single settings screen.
 
 All styling is generated from stored options and applied on the login page with no page-weight cost. Options are sanitized on save, and the plugin follows WordPress coding standards.
 
@@ -36,9 +36,9 @@ All styling is generated from stored options and applied on the login page with 
 
 == Installation ==
 
-1. Upload the `custom-login-branding` folder to `/wp-content/plugins/`, or install the plugin through the WordPress **Plugins** screen.
+1. Upload the `branded-login-page` folder to `/wp-content/plugins/`, or install the plugin through the WordPress **Plugins** screen.
 2. Activate the plugin through the **Plugins** menu in WordPress.
-3. Go to **Settings → Custom Login Branding** and configure your logo, background, colors, and options.
+3. Go to **Settings → Branded Login Page** and configure your logo, background, colors, and options.
 4. Save. The changes appear on your login page.
 
 == Frequently Asked Questions ==

@@ -3,18 +3,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-function clb_login_logo_url() {
+function blp_login_logo_url() {
 	return home_url( '/' );
 }
-add_filter( 'login_headerurl', 'clb_login_logo_url' );
+add_filter( 'login_headerurl', 'blp_login_logo_url' );
 
-function clb_login_logo_title() {
+function blp_login_logo_title() {
 	return get_bloginfo( 'name' );
 }
-add_filter( 'login_headertext', 'clb_login_logo_title' );
+add_filter( 'login_headertext', 'blp_login_logo_title' );
 
-function clb_login_page_styles() {
-	$options = clb_get_options();
+function blp_login_page_styles() {
+	$options = blp_get_options();
 
 	$logo_url              = ! empty( $options['logo_url'] ) ? esc_url( $options['logo_url'] ) : '';
 	$background_url        = ! empty( $options['background_url'] ) ? esc_url( $options['background_url'] ) : '';
@@ -30,7 +30,7 @@ function clb_login_page_styles() {
 	$hide_back_to_blog     = ! empty( $options['hide_back_to_blog'] );
 	$hide_lang_switcher    = ! empty( $options['hide_language_switcher'] );
 	?>
-	<style id="clb-login-styles">
+	<style id="blp-login-styles">
 		body.login {
 			min-height: 100vh;
 			<?php if ( ! empty( $background_url ) ) : ?>
@@ -176,10 +176,10 @@ function clb_login_page_styles() {
 	</style>
 	<?php
 }
-add_action( 'login_enqueue_scripts', 'clb_login_page_styles' );
+add_action( 'login_enqueue_scripts', 'blp_login_page_styles' );
 
-function clb_filter_login_errors( $error ) {
-	$options = clb_get_options();
+function blp_filter_login_errors( $error ) {
+	$options = blp_get_options();
 
 	if ( empty( $options['generic_error_message'] ) ) {
 		return $error;
@@ -189,4 +189,4 @@ function clb_filter_login_errors( $error ) {
 		? $options['error_message']
 		: 'Login failed. Please check your credentials and try again.';
 }
-add_filter( 'login_errors', 'clb_filter_login_errors' );
+add_filter( 'login_errors', 'blp_filter_login_errors' );

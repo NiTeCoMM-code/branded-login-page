@@ -12,7 +12,7 @@
 	<arg name="colors"/>
 
 	<file>includes/</file>
-	<file>custom-login-branding.php</file>
+	<file>branded-login-page.php</file>
 
 	<exclude-pattern>*/vendor/*</exclude-pattern>
 </ruleset>

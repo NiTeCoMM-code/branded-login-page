@@ -3,17 +3,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-function clb_remove_login_shake() {
-	$options = clb_get_options();
+function blp_remove_login_shake() {
+	$options = blp_get_options();
 
 	if ( ! empty( $options['remove_login_shake'] ) ) {
 		remove_action( 'login_head', 'wp_shake_js', 12 );
 	}
 }
-add_action( 'login_head', 'clb_remove_login_shake' );
+add_action( 'login_head', 'blp_remove_login_shake' );
 
-function clb_block_author_enumeration() {
-	$options = clb_get_options();
+function blp_block_author_enumeration() {
+	$options = blp_get_options();
 
 	if ( empty( $options['block_author_enum'] ) ) {
 		return;
@@ -30,4 +30,4 @@ function clb_block_author_enumeration() {
 		exit;
 	}
 }
-add_action( 'template_redirect', 'clb_block_author_enumeration' );
+add_action( 'template_redirect', 'blp_block_author_enumeration' );

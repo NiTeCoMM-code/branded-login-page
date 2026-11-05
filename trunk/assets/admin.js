@@ -1,7 +1,7 @@
 jQuery(function ($) {
-	$('.clb-color-field').wpColorPicker();
+	$('.blp-color-field').wpColorPicker();
 
-	$(document).on('click', '.clb-upload-button', function (e) {
+	$(document).on('click', '.blp-upload-button', function (e) {
 		e.preventDefault();
 
 		var button = $(this);
@@ -23,7 +23,7 @@ jQuery(function ($) {
 		frame.open();
 	});
 
-	$(document).on('click', '.clb-clear-button', function (e) {
+	$(document).on('click', '.blp-clear-button', function (e) {
 		e.preventDefault();
 
 		var button = $(this);
