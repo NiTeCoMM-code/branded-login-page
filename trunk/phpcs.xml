@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ruleset name="Custom Login Branding">
+	<description>Custom Login Branding coding standards.</description>
+
+	<rule ref="WordPress-Extra"/>
+	<rule ref="WordPress-Docs"/>
+
+	<config name="minimum_supported_wp_version" value="5.0"/>
+	<config name="testVersion" value="7.4-"/>
+
+	<arg name="extensions" value="php"/>
+	<arg name="colors"/>
+
+	<file>includes/</file>
+	<file>custom-login-branding.php</file>
+
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+</ruleset>

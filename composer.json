@@ -1,0 +1,33 @@
+{
+	"name": "nitecomm-code/custom-login-branding",
+	"description": "Branded, configurable WordPress login page with logo, background image, colors, and basic security options.",
+	"type": "wordpress-plugin",
+	"license": "GPL-2.0-or-later",
+	"require": {
+		"composer/installers": "^2.0"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^9.6",
+		"wp-coding-standards/wpcs": "^3.0",
+		"phpcompatibility/php-compatibility": "^9.0",
+		"phpcompatibility/phpcompatibility-wp": "^2.1"
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true,
+			"phpcompatibility/php-compatibility": true,
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	},
+	"scripts": {
+		"cs": [
+			"phpcs -n --standard=trunk/phpcs.xml --extensions=php trunk/includes trunk/custom-login-branding.php"
+		],
+		"cs-fix": [
+			"phpcbf --standard=trunk/phpcs.xml --extensions=php trunk/includes trunk/custom-login-branding.php"
+		],
+		"compatibility": [
+			"phpcs -n --standard=trunk/phpcs.xml --extensions=php trunk/includes trunk/custom-login-branding.php"
+		]
+	}
+}
