@@ -1,7 +1,7 @@
 === Branded Login Page ===
 Contributors:      techtankholdings
 Donate link:       https://techtankholdings.com/
-Tags:              login, branding, customize, admin, security, login page
+Tags:              login, branding, customize, admin, security
 Requires at least: 5.0
 Requires PHP:      7.4
 Tested up to:      7.1
