@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Branded Login Page
- * Plugin URI: https://techtankholdings.com/
+ * Plugin URI: https://wordpress.org/plugins/branded-login-page/
  * Description: Adds a configurable branded WordPress login page with logo, background image, color controls, and basic security options.
  * Version: 1.0.1
  * Author: techtankholdings
- * Author URI: https://techtankholdings.com/
+ * Author URI: https://github.com/NiTeCoMM-code
  * License: GPLv2 or later
  * Text Domain: branded-login-page
  */
